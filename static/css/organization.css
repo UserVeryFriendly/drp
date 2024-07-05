@@ -1,0 +1,70 @@
+body {
+    background-color: #24272E;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.organization-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* уменьшить расстояние между кнопками */
+}
+
+.organization-form {
+    margin: 0;
+}
+
+/* Основной стиль кнопок */
+button {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #3498db; /* Используйте цвет из blue переменной */
+    border-radius: 0.6em;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+    font-size: 14px; /* Уменьшение размера шрифта */
+    font-weight: 400;
+    line-height: 1;
+    padding: 1em 2.5em; /* Уменьшение внутреннего отступа */
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    width: 100%;
+    margin: 0; /* Уменьшение внешнего отступа */
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db; /* Используйте цвет из blue переменной */
+    transition: all 150ms ease-in-out;
+}
+
+button:hover,
+button:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db; /* Используйте цвет из blue переменной */
+}

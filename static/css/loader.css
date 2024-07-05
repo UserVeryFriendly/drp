@@ -1,0 +1,50 @@
+.center-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed; /* Обеспечиваем фиксированное позиционирование поверх всего содержимого */
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    z-index: 9999; /* Высокий z-index, чтобы перекрыть весь контент */
+}
+
+.loader-triangle-3 {
+    position: relative;
+}
+
+.loader-triangle-3 line {
+    stroke-width: 7; /* Увеличенная ширина полосок */
+    stroke-linecap: round;
+    stroke-dasharray: 70 100; /* Длина пунктирного отрезка и промежутка */
+    animation: line-animation 3s ease-in-out infinite;
+}
+
+.line-green {
+    stroke: #00ff00; /* Зеленая линия */
+    animation-delay: 0s; /* Начинает анимацию без задержки */
+}
+
+.line-blue {
+    stroke: #0554ff; /* Синяя линия */
+    animation-delay: 0.5s; /* Задержка анимации */
+}
+
+.line-black {
+    stroke: #000000; /* Черная линия */
+    animation-delay: 1s; /* Задержка анимации */
+}
+
+@keyframes line-animation {
+    0% {
+        stroke-dashoffset: 70;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 70;
+    }
+}

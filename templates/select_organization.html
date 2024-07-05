@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДРП</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/organization.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loader.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo" class="logo">
+            <h1>Выберите организацию:</h1>
+        </div>
+        <div class="organization-buttons">
+            {% for org in organizations %}
+                <form method="post" action="{{ url_for('select_organization') }}" class="organization-form">
+                    <input type="hidden" name="organization" value="{{ org }}">
+                    <button type="submit" class="third">{{ org }}</button>
+                </form>
+            {% endfor %}
+            <form method="post" action="{{ url_for('select_organization') }}" class="organization-form">
+                <input type="hidden" name="organization" value="Все">
+                <button type="submit" class="third">Все</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loader-overlay" class="center-body" style="display: none;">
+        <div class="loader-triangle-3">
+            <svg width="90" height="90" viewBox="0 0 100 100">
+                <!-- Зеленая линия, старт из верхней точки -->
+                <line class="line-green" x1="50" y1="10" x2="90" y2="80" />
+                <!-- Синяя линия, старт из левой точки -->
+                <line class="line-blue" x1="10" y1="80" x2="50" y2="10" />
+                <!-- Черная линия, старт из правой точки -->
+                <line class="line-black" x1="90" y1="80" x2="10" y2="80" />
+            </svg>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+</body>
+</html>

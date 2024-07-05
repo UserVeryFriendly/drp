@@ -1,0 +1,266 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #24272E;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.organization-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.organization-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: #4A90E2;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.organization-form button:hover {
+    background-color: #6595d6;
+}
+
+.header-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #24272E;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #353A44;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container h1 {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.header-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.header-button {
+    flex-shrink: 0;
+}
+
+/* Стиль для кнопки "Вернуться к выбору" */
+.header-button .button {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #3498db;
+    border-radius: 0.6em;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    transition: all 150ms ease-in-out;
+}
+
+.header-button .button:hover,
+.header-button .button:focus {
+    color: #fff;
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+.header-table-wrapper {
+    margin-top: 15px; /* Добавляем отступ для разделения между заголовком и таблицей */
+    width: 100%;
+}
+
+.header-table-wrapper table {
+    width: 98%; /* Обеспечиваем, что таблица занимает всю ширину родителя */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #353A44;
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.column-headers {
+    display: flex;
+    justify-content: space-between;
+    background-color: #353A44;
+    padding: 10px 30px;
+    position: sticky;
+    top: 80px; /* Высота заголовка */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.column-header {
+    flex: 1;
+    text-align: left;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.first-column {
+    width: 10%; /* Устанавливаем ширину первой колонки */
+}
+
+table {
+    width: 98%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Убираем верхний и нижний отступы */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+tbody {
+    background-color: #24272E;
+}
+
+tbody tr {
+    color: #ffffff;
+}
+
+tbody tr td {
+    padding: 15px;
+    border-bottom: 1px solid #353A44;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.row-fade-in {
+    animation: fadeIn 1s ease-in-out forwards; /* Добавить forwards для сохранения конечного состояния */
+}
+
+.row-fade-out {
+    animation: fadeOut 1s ease-in-out forwards; /* Добавить forwards для сохранения конечного состояния */
+}
+
+.table-hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Ширина столбцов в процентах */
+.column-1 { width: 10%; }
+.column-2 { width: 25%; text-align: center; }
+.column-3 { width: 10%; }
+.column-4 { width: 10%; }
+.column-5 { width: 10%; }
+.column-6 { width: 25%; text-align: center; }
+.column-7 { width: 10%; }
+
+/* Ширина ячеек данных в процентах */
+#table-body td:nth-child(1) { width: 10%; }
+#table-body td:nth-child(2) { width: 25%; }
+#table-body td:nth-child(3) { width: 10%; }
+#table-body td:nth-child(4) { width: 10%; }
+#table-body td:nth-child(5) { width: 10%; }
+#table-body td:nth-child(6) { width: 25%; }
+#table-body td:nth-child(7) { width: 10%; }
+
+/* Стили для скроллбара */
+::-webkit-scrollbar {
+    width: 5px; /* ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2); /* цвет дорожки скроллбара, прозрачный */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* цвет ползунка, чуть темнее фона */
+    border-radius: 6px; /* закругление углов ползунка */
+    border: 2px solid transparent; /* прозрачная граница для ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* цвет ползунка при наведении, чуть ярче */
+}
+
+.status-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px; /* Отступ слева от текста статуса */
+}
+
+.status-ready {
+    background-color: green; /* Цвет для "Готово" */
+}
+
+.status-no-solution {
+    background-color: yellow; /* Цвет для "Нет решения" */
+}
+
+.status-rejected {
+    background-color: red; /* Цвет для "Отклонён" */
+}

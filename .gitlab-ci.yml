@@ -1,0 +1,34 @@
+stages:
+  - stop_docker
+  - deploy
+  - start_docker
+
+stop_docker:
+  stage: stop_docker
+  script:
+    - cd /abc/drp
+    - docker-compose down
+  only:
+    - main
+  tags:
+    - drp
+
+job_to_prod:
+  stage: deploy
+  script:
+    - cd /abc/drp
+    - sudo git pull --no-rebase http://${USERNAME}:${PASSWORD}@10.50.3.6/root/drp.git
+  only:
+    - main
+  tags:
+    - drp
+
+start_docker:
+  stage: start_docker
+  script:
+    - cd /abc/drp
+    - docker-compose up -d --build
+  only:
+    - main
+  tags:
+    - drp
